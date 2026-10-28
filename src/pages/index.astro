@@ -1,11 +1,1175 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Email de contacto que se muestra y copia en la sección #contacto.
+const email = "tu-email@ejemplo.com";
 ---
 
 <Layout>
-	<Welcome />
+  <header class="bar">
+    <div class="in">
+      <a href="#inicio" aria-label="Inicio"
+        ><img src="/brand/logo-claro.svg" alt="DMAS" /></a
+      >
+      <nav aria-label="Secciones">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#pergoagro">Proyectos</a>
+        <a class="cta" href="#contacto">Trabajemos juntos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <symbol id="ig-like" viewBox="0 0 24 24"
+        ><path
+          d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2Z"
+        ></path></symbol
+      >
+      <symbol id="ig-comment" viewBox="0 0 24 24"
+        ><path
+          d="M20.5 11.6a8.5 8.5 0 1 1-3.4-6.8 8.4 8.4 0 0 1 3.4 6.8Zm0 0 .8 8.2-5-2.3"
+        ></path></symbol
+      >
+      <symbol id="ig-repost" viewBox="0 0 24 24"
+        ><path
+          d="M17 3.5 20.5 7 17 10.5M20.5 7H8a4 4 0 0 0-4 4v1M7 20.5 3.5 17 7 13.5M3.5 17H16a4 4 0 0 0 4-4v-1"
+        ></path></symbol
+      >
+      <symbol id="ig-share" viewBox="0 0 24 24"
+        ><path d="M21.5 3.5 10.6 13.4M21.5 3.5 14.6 21l-4-7.6-7.6-4 18.5-5.9Z"
+        ></path></symbol
+      >
+      <symbol id="ig-save" viewBox="0 0 24 24"
+        ><path
+          d="M19 21 12 15.3 5 21V4.5A1.5 1.5 0 0 1 6.5 3h11A1.5 1.5 0 0 1 19 4.5Z"
+        ></path></symbol
+      >
+    </svg>
+    <!-- 1 · Portada -->
+    <section class="page grid-bg cover" id="inicio">
+      <div class="in">
+        <div class="cover-grid">
+          <div>
+            <p class="hash">#DeMásCanchero</p>
+            <h1 style="margin-top:18px">
+              <span>Hola,</span><span
+                >soy <span class="hl"><i></i>Delfina<i></i></span></span
+              >
+            </h1>
+            <p class="roles">
+              Social Media Manager<br />&amp; Community Manager
+            </p>
+            <div class="row">
+              <a class="pill" href="#contacto">Trabajemos juntos!</a>
+              <span class="handle">@hello.dmas</span>
+            </div>
+          </div>
+          <div class="photo">
+            <div class="frame">
+              <img class="ph" src="/brand/logo-claro.svg" alt="DMAS" />
+            </div>
+            <img class="s1" data-parallax="0.18" src="/brand/st-carita.svg" alt="" />
+            <img class="s2" data-parallax="0.3" src="/brand/st-corazon.svg" alt="" />
+            <img class="s3" data-parallax="0.1" src="/brand/st-rayo.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · Sobre mí -->
+    <section class="page dark grid-bg" id="sobre-mi">
+      <img
+        class="sticker"
+        data-parallax="0.22"
+        src="/brand/st-estrella.svg"
+        alt=""
+        style="right:6%;top:10%"
+      />
+      <img
+        class="sticker"
+        data-parallax="0.4"
+        src="/brand/st-internet.svg"
+        alt=""
+        style="right:14%;bottom:12%;width:clamp(60px,7vw,110px)"
+      />
+      <div class="in">
+        <div class="about">
+          <div>
+            <p class="eyebrow muted">Sobre mí</p>
+            <h2 class="title" style="margin-top:14px">
+              Tu marca tiene mucho para decir. Yo sé <span class="hl v"
+                ><i></i>cómo contarlo.<i></i></span
+              >
+            </h2>
+          </div>
+          <div class="txt">
+            <p>
+              Soy Delfina Socias, Social Media Manager y Community Manager. Con
+              DMAS creo contenido que construye, conecta y transforma.
+            </p>
+            <p>
+              Trabajo cada marca desde la estrategia: entiendo a quién le habla,
+              qué quiere lograr y cómo tiene que sonar. Después lo bajo a un
+              calendario, a piezas y a una comunidad que responde.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · Servicios -->
+    <section class="page grid-bg" id="servicios">
+      <div class="in">
+        <div class="center-head">
+          <span class="tag-head">Mis servicios</span>
+          <p class="lead muted">
+            Estrategia, identidad y gestión para que tu marca crezca en redes.
+          </p>
+        </div>
+        <div class="services">
+          <div class="svc">
+            <img src="/brand/ic-idea.svg" alt="" /><h3>
+              Estrategia de contenido
+            </h3><p>Objetivos, pilares, tono de voz y calendario mensual.</p>
+          </div>
+          <div class="svc">
+            <img src="/brand/ic-corazon.svg" alt="" /><h3>
+              Community management
+            </h3><p>
+              Respuestas, moderación de comentarios y mensajes con la voz de la
+              marca.
+            </p>
+          </div>
+          <div class="svc">
+            <img src="/brand/ic-hash.svg" alt="" /><h3>
+              Gestión integral de redes
+            </h3><p>
+              Planificación, publicación y seguimiento en Instagram, TikTok y
+              más.
+            </p>
+          </div>
+          <div class="svc">
+            <img src="/brand/ic-flor.svg" alt="" /><h3>
+              Identidad para redes
+            </h3><p>
+              Grilla, plantillas y estilo visual para que el feed sea
+              reconocible.
+            </p>
+          </div>
+          <div class="svc">
+            <img src="/brand/ic-flecha.svg" alt="" /><h3>
+              Métricas y reportes
+            </h3><p>
+              Análisis mensual con lo que funcionó y los próximos pasos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · Skills y herramientas -->
+    <section class="page grid-bg">
+      <div class="in">
+        <div class="two">
+          <div>
+            <span class="tag-head" style="background:var(--negro)"
+              >Mis skills</span
+            >
+            <ul class="checks">
+              <li>Estrategia y planificación de contenido</li>
+              <li>Copywriting y tono de voz</li>
+              <li>Gestión de comunidad y atención por DM</li>
+              <li>Guiones para reels y TikTok</li>
+              <li>Diseño de piezas y grilla de feed</li>
+              <li>Análisis de métricas y reportes</li>
+            </ul>
+          </div>
+          <div>
+            <span class="tag-head">Las herramientas que uso</span>
+            <div class="tools">
+              <span class="tool"
+                ><svg viewBox="0 0 24 24" aria-hidden="true"
+                  ><path
+                    d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"
+                  ></path></svg
+                >Meta Business Suite</span
+              >
+              <span class="tool"
+                ><svg viewBox="0 0 24 24" aria-hidden="true"
+                  ><path
+                    d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"
+                  ></path></svg
+                >Instagram</span
+              >
+              <span class="tool"
+                ><svg viewBox="0 0 24 24" aria-hidden="true"
+                  ><path
+                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                  ></path></svg
+                >TikTok</span
+              >
+              <span class="tool"
+                ><svg viewBox="0 0 24 24" aria-hidden="true"
+                  ><path
+                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zM6.962 7.68c.754 0 1.337.549 1.405 1.2.069.583-.171 1.097-.822 1.406-.343.171-.48.172-.549.069-.034-.069 0-.137.069-.206.617-.514.617-.926.548-1.508-.034-.378-.308-.618-.583-.618-1.2 0-2.914 2.674-2.674 4.629.103.754.549 1.646 1.509 1.646.308 0 .65-.103.96-.24.5-.264.799-.47 1.097-.8-.073-.885.704-2.046 1.851-2.046.515 0 .926.205.96.583.068.514-.377.582-.514.582s-.378-.034-.378-.17c-.034-.138.309-.07.275-.378-.035-.206-.24-.274-.446-.274-.72 0-1.131.994-1.029 1.611.035.275.172.549.447.549.205 0 .514-.31.617-.755.068-.308.343-.514.583-.514.102 0 .17.034.205.171v.138c-.034.137-.137.548-.102.651 0 .069.034.171.17.171.092 0 .436-.18.777-.459.117-.59.253-1.298.253-1.357.034-.24.137-.48.617-.48.103 0 .171.034.205.171v.138l-.136.617c.445-.583 1.097-.994 1.508-.994.172 0 .309.102.309.274 0 .103 0 .274-.069.446-.137.377-.309.96-.412 1.474 0 .137.035.274.207.274.171 0 .685-.206 1.096-.754l.007-.004c-.002-.068-.007-.134-.007-.202 0-.411.035-.754.104-.994.068-.274.411-.514.617-.514.103 0 .205.069.205.171 0 .035 0 .103-.034.137-.137.446-.24.857-.24 1.269 0 .24.034.582.102.788 0 .034.035.069.07.069.068 0 .548-.445.89-1.028-.308-.206-.48-.549-.48-.96 0-.72.446-1.097.858-1.097.343 0 .617.24.617.72 0 .308-.103.65-.274.96h.102a.77.77 0 0 0 .584-.24.293.293 0 0 1 .134-.117c.335-.425.83-.74 1.41-.74.48 0 .924.205.959.582.068.515-.378.618-.515.618l-.002-.002c-.138 0-.377-.035-.377-.172 0-.137.309-.068.274-.376-.034-.206-.24-.275-.446-.275-.686 0-1.13.891-1.028 1.611.034.275.171.583.445.583.206 0 .515-.308.652-.754.068-.274.343-.514.583-.514.103 0 .17.034.205.171 0 .069 0 .206-.137.652-.17.308-.171.48-.137.617.034.274.171.48.309.583.034.034.068.102.068.102 0 .069-.034.138-.137.138-.034 0-.068 0-.103-.035-.514-.205-.72-.548-.789-.891-.205.24-.445.377-.72.377-.445 0-.89-.411-.96-.926a1.609 1.609 0 0 1 .075-.649c-.203.13-.422.203-.623.203h-.17c-.447.652-.927 1.098-1.27 1.303a.896.896 0 0 1-.377.104c-.068 0-.171-.035-.205-.104-.095-.152-.156-.392-.193-.667-.481.527-1.145.805-1.453.805-.343 0-.548-.206-.582-.55v-.376c.102-.754.377-1.2.377-1.337a.074.074 0 0 0-.069-.07c-.24 0-1.028.824-1.166 1.373l-.103.445c-.068.309-.377.515-.582.515-.103 0-.172-.035-.206-.172v-.137l.046-.233c-.435.31-.87.508-1.075.508-.308 0-.48-.172-.514-.412-.206.274-.445.412-.754.412-.352 0-.696-.24-.862-.593-.244.275-.523.553-.852.764-.48.309-1.028.549-1.68.549-.582 0-1.097-.309-1.371-.583-.412-.377-.651-.96-.686-1.509-.205-1.68.823-3.84 2.4-4.8.378-.205.755-.343 1.132-.343zm9.77 3.291c-.104 0-.172.172-.172.343 0 .274.137.583.309.755a1.74 1.74 0 0 0 .102-.583c0-.343-.137-.515-.24-.515z"
+                  ></path></svg
+                >Canva</span
+              >
+              <span class="tool"
+                ><svg viewBox="0 0 24 24" aria-hidden="true"
+                  ><path
+                    d="M10.53 10.73c-.1-.31-.19-.61-.29-.92-.1-.31-.19-.6-.27-.89-.08-.28-.15-.54-.22-.78h-.02c-.09.43-.2.86-.34 1.29-.15.48-.3.98-.46 1.48-.14.51-.29.98-.44 1.4h2.54c-.06-.211-.14-.46-.23-.721-.09-.269-.18-.559-.27-.859zM19.75.3H4.25C1.9.3 0 2.2 0 4.55v14.9c0 2.35 1.9 4.25 4.25 4.25h15.5c2.35 0 4.25-1.9 4.25-4.25V4.55C24 2.2 22.1.3 19.75.3zM14.7 16.83h-2.091c-.069.01-.139-.04-.159-.11l-.82-2.38H7.91l-.76 2.35c-.02.09-.1.15-.19.141H5.08c-.11 0-.14-.061-.11-.18L8.19 7.38c.03-.1.06-.21.1-.33.04-.21.06-.43.06-.65-.01-.05.03-.1.08-.11h2.59c.08 0 .12.03.13.08l3.65 10.3c.03.109 0 .16-.1.16zm3.4-.15c0 .11-.039.16-.129.16H16.01c-.1 0-.15-.061-.15-.16v-7.7c0-.1.041-.14.131-.14h1.98c.09 0 .129.05.129.14v7.7zm-.209-9.03c-.231.24-.571.37-.911.35-.33.01-.65-.12-.891-.35-.23-.25-.35-.58-.34-.92-.01-.34.12-.66.359-.89.242-.23.562-.35.892-.35.391 0 .689.12.91.35.22.24.34.56.33.89.01.34-.11.67-.349.92z"
+                  ></path></svg
+                >Illustrator</span
+              >
+              <span class="tool"
+                ><svg viewBox="0 0 24 24" aria-hidden="true"
+                  ><circle cx="12" cy="12" r="11"></circle><text
+                    x="12"
+                    y="16.2"
+                    text-anchor="middle"
+                    font-size="12"
+                    font-weight="700"
+                    class="lt">C</text
+                  ></svg
+                >CapCut</span
+              >
+              <span class="tool"
+                ><svg viewBox="0 0 24 24" aria-hidden="true"
+                  ><path
+                    d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"
+                  ></path></svg
+                >Notion</span
+              >
+              <span class="tool"
+                ><svg viewBox="0 0 24 24" aria-hidden="true"
+                  ><circle cx="12" cy="12" r="11"></circle><text
+                    x="12"
+                    y="16.2"
+                    text-anchor="middle"
+                    font-size="12"
+                    font-weight="700"
+                    class="lt">M</text
+                  ></svg
+                >Metricool</span
+              >
+              <span class="tool"
+                ><svg viewBox="0 0 24 24" aria-hidden="true"
+                  ><path
+                    d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"
+                  ></path></svg
+                >ChatGPT</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 · PergoAgro: branding -->
+    <section class="page grid-bg pg" id="pergoagro">
+      <div class="in">
+        <div class="pg-head">
+          <div class="l">
+            <span class="tag-head pg-tag">Caso · Branding desde cero</span>
+            <span class="handle"
+              >@pergoagro · Rollos de alfalfa · Tostado, Santa Fe</span
+            >
+            <h2 class="title">
+              Una marca del campo, <span class="hl"
+                ><i></i>creada de cero.<i></i></span
+              >
+            </h2>
+          </div>
+        </div>
+        <div class="brand-grid">
+          <button class="sheet-btn" type="button" data-zoom
+            ><img
+              class="sheet"
+              src="/img/pergo_branding.jpg"
+              alt="Manual de marca de PergoAgro: logo sobre campo de alfalfa, variantes de color del isotipo y tipografía Poppins"
+              loading="lazy"
+            /></button
+          >
+          <div class="side">
+            <p>
+              Desarrollo integral de marca para una empresa de confección de
+              rollos de alfalfa. Diseñé el logo, la identidad visual y el
+              sistema de contenidos, y lancé la cuenta con una estrategia de <b
+                >crecimiento 100% orgánico</b
+              >, sin inversión en pauta (paid media).
+            </p>
+            <ul class="scope">
+              <li>Branding: logo, isotipo y versiones de color</li>
+              <li>Identidad visual para redes</li>
+              <li>Estrategia y calendario de contenido</li>
+              <li>Producción y edición de video</li>
+              <li>Diseño de publicaciones y copywriting</li>
+              <li>Community management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 · PergoAgro: contenido -->
+    <section class="page pg">
+      <div class="in">
+        <div class="pg-head">
+          <div class="l">
+            <span class="tag-head pg-tag">Estrategia de contenido</span>
+            <h2 class="title">
+              Contenido de valor para el <span class="hl"
+                ><i></i>productor.<i></i></span
+              >
+            </h2>
+          </div>
+          <p class="muted" style="max-width:36ch">
+            Contenido pensado para que la marca sea útil antes de vender: educa,
+            muestra el trabajo y acompaña a la comunidad.
+          </p>
+        </div>
+        <div class="pg-content">
+          <div>
+            <div class="posts">
+              <button class="piece" type="button"
+                ><img
+                  src="/img/pergo_3numeros.jpg"
+                  alt="Post PergoAgro: 3 números que definen un buen rollo"
+                  loading="lazy"
+                /></button
+              >
+              <button class="piece" type="button"
+                ><img
+                  src="/img/pergo_campo_numeros.jpg"
+                  alt="Post PergoAgro, Campo en números: la mayoría compra tarde y compra mal"
+                  loading="lazy"
+                /></button
+              >
+              <button class="piece" type="button"
+                ><img
+                  src="/img/pergo_9julio.jpg"
+                  alt="Post PergoAgro por el 9 de julio, Día de la Independencia"
+                  loading="lazy"
+                /></button
+              >
+            </div>
+            <article class="ig-card profile-card" style="margin-top:14px">
+              <div class="avatar pg-av" aria-label="Logo de PergoAgro">
+                <span><b>pergo</b>agro</span>
+              </div>
+              <div>
+                <div class="p-head">
+                  <a
+                    class="p-handle ig-link"
+                    href="https://www.instagram.com/pergoagro/"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="pergoagro en Instagram (se abre en una pestaña nueva)"
+                    ><svg class="ig-ico" viewBox="0 0 24 24" aria-hidden="true"
+                      ><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle
+                        cx="12"
+                        cy="12"
+                        r="4.2"></circle><circle class="dot" cx="17.3" cy="6.7" r="1.1"
+                      ></circle></svg
+                    >pergoagro<svg
+                      class="arrow"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"><path d="M7 17 17 7M8.5 7H17v8.5"></path></svg
+                    ></a
+                  ><span class="kind kind-corner"
+                    >Perfil optimizado</span
+                  >
+                </div>
+                <p class="p-name">PERGOAGRO | Rollos de alfalfa</p>
+                <div class="p-stats">
+                  <div><b>10</b><span>publicaciones</span></div>
+                  <div><b>120</b><span>seguidores</span></div>
+                  <div><b>28</b><span>seguidos</span></div>
+                </div>
+                <p class="p-bio">
+                  Confección de rollos de alta calidad. Tradicionales y picados,
+                  con hilo o red.<br />📍 Tostado, Santa Fe
+                </p>
+                <div class="p-foot">
+                  <span class="win">Palabra clave en el nombre</span><span
+                    class="win v">Link directo a WhatsApp</span
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 · PergoAgro: resultados -->
+    <section class="page dark grid-bg pg">
+      <div class="in">
+        <div class="pg-head">
+          <div class="l">
+            <p class="eyebrow muted">@pergoagro · Resultados</p>
+            <h2 class="title">
+              Resultados <span class="hl"><i></i>100% orgánicos.<i></i></span>
+            </h2>
+          </div>
+          <p style="max-width:38ch">
+            <span class="muted"
+              >Sin publicidad paga. Datos de Instagram Insights de dos reels,
+              con</span
+            >
+            <mark class="mk">una cuenta de 120 seguidores.</mark>
+          </p>
+        </div>
+        <div class="kpis">
+          <div class="kpi">
+            <b>25.389</b><span>visualizaciones orgánicas</span><small
+              >suma de 2 reels</small
+            >
+          </div>
+          <div class="kpi">
+            <b>56x</b><span>alcance frente a la base de seguidores</span><small
+              >6.776 cuentas alcanzadas · 120 seguidores</small
+            >
+          </div>
+          <div class="kpi">
+            <b>5,3%</b><span>tasa de interacción sobre alcance</span><small
+              >360 interacciones · reel de campo</small
+            >
+          </div>
+          <div class="kpi">
+            <b>+35</b><span>seguidores nuevos con 2 reels</span><small
+              >29% de la comunidad actual</small
+            >
+          </div>
+        </div>
+        <div class="cards" style="margin-top:18px">
+          <article class="ig-card">
+            <button class="media" type="button"
+              ><img
+                src="/img/pergo_reel1.jpg"
+                alt="Portada del reel de PergoAgro: tractor cortando alfalfa bajo un cielo con nubes"
+                loading="lazy"
+              /></button
+            >
+            <div class="stats">
+              <div class="top">
+                <span class="kind">Reel</span><h3>Corte de alfalfa</h3><span
+                  class="by"
+                  >Collab con <b>locosdelosrollosok</b> y <b
+                    >sentimientosporelcampoo</b
+                  ></span
+                >
+              </div>
+              <div class="icons">
+                <div>
+                  <svg><use href="#ig-like"></use></svg><span>313</span>
+                </div>
+                <div>
+                  <svg><use href="#ig-comment"></use></svg><span>0</span>
+                </div>
+                <div>
+                  <svg><use href="#ig-repost"></use></svg><span>9</span>
+                </div>
+                <div>
+                  <svg><use href="#ig-share"></use></svg><span>23</span>
+                </div>
+                <div><svg><use href="#ig-save"></use></svg><span>15</span></div>
+              </div>
+              <div class="tiles">
+                <div class="tile">
+                  <small>Visualizaciones</small><b>11.751</b>
+                </div>
+                <div class="tile">
+                  <small>Cuentas alcanzadas</small><b>6.776</b>
+                </div>
+                <div class="tile">
+                  <small>Tiempo promedio de reproducción</small><b>6 s</b>
+                </div>
+                <div class="tile">
+                  <small>Nuevos seguidores</small><b>22</b>
+                </div>
+              </div>
+              <div class="wins">
+                <span class="win">56x alcance vs seguidores</span><span
+                  class="win v">5,3% interacción</span
+                >
+              </div>
+            </div>
+          </article>
+          <article class="ig-card">
+            <button class="media" type="button"
+              ><img
+                src="/img/pergo_reel2.jpg"
+                alt="Portada del reel de PergoAgro: bandera argentina flameando"
+                loading="lazy"
+              /></button
+            >
+            <div class="stats">
+              <div class="top">
+                <span class="kind">Reel</span><h3>Fecha patria</h3><span
+                  class="by"
+                  >Collab con <b>locos__por_el_campo_arg</b> y <b
+                    >locosdelosrollosok</b
+                  ></span
+                >
+              </div>
+              <div class="icons">
+                <div>
+                  <svg><use href="#ig-like"></use></svg><span>307</span>
+                </div>
+                <div>
+                  <svg><use href="#ig-comment"></use></svg><span>0</span>
+                </div>
+                <div>
+                  <svg><use href="#ig-repost"></use></svg><span>5</span>
+                </div>
+                <div>
+                  <svg><use href="#ig-share"></use></svg><span>18</span>
+                </div>
+                <div><svg><use href="#ig-save"></use></svg><span>8</span></div>
+              </div>
+              <div class="tiles">
+                <div class="tile">
+                  <small>Visualizaciones</small><b>13.638</b>
+                </div>
+                <div class="tile"><small>Espectadores</small><b>244</b></div>
+                <div class="tile">
+                  <small>Tiempo promedio de reproducción</small><b>7 s</b>
+                </div>
+                <div class="tile">
+                  <small>Nuevos seguidores</small><b>13</b>
+                </div>
+              </div>
+              <div class="wins">
+                <span class="win">13.638 visualizaciones orgánicas</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 · Ley Primera: perfil y estrategia -->
+    <section class="page grid-bg" id="ley-primera">
+      <div class="in">
+        <div class="pg-head">
+          <div class="l">
+            <span class="tag-head lp-tag"
+              >Caso de éxito · Estrategia de contenido</span
+            >
+            <h2 class="title">
+              Contenido que <span class="hl"><i></i>genera impacto.<i></i></span
+              >
+            </h2>
+          </div>
+          <p class="muted" style="max-width:40ch">
+            Cabaña de cría Bonsmara. Sin rebranding: diseñé una estrategia de
+            contenido a medida. Antes de cada reel, historias introductorias que
+            generan expectativa y llevan a la audiencia al lanzamiento.
+          </p>
+        </div>
+        <div class="lp-intro" style="grid-template-columns:minmax(0,760px)">
+          <article class="ig-card profile-card">
+            <div class="avatar">
+              <img
+                src="/img/lp_avatar.jpg"
+                alt="Logo de Ley Primera Bonsmara"
+              />
+            </div>
+            <div>
+              <div class="p-head">
+                <a
+                  class="p-handle ig-link"
+                  href="https://www.instagram.com/leyprimerabonsmara/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="leyprimerabonsmara en Instagram (se abre en una pestaña nueva)"
+                  ><svg class="ig-ico" viewBox="0 0 24 24" aria-hidden="true"
+                    ><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle
+                      cx="12"
+                      cy="12"
+                      r="4.2"></circle><circle class="dot" cx="17.3" cy="6.7" r="1.1"
+                    ></circle></svg
+                  >leyprimerabonsmara<svg
+                    class="arrow"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"><path d="M7 17 17 7M8.5 7H17v8.5"></path></svg
+                  ></a
+                ><span
+                  class="kind kind-corner">Caso de éxito</span
+                >
+              </div>
+              <p class="p-name">LEY PRIMERA Bonsmara | Ricardo E. Mercau</p>
+              <div class="p-stats">
+                <div><b>13</b><span>publicaciones</span></div>
+                <div><b>335</b><span>seguidores</span></div>
+                <div><b>70</b><span>seguidos</span></div>
+              </div>
+              <p class="p-bio">
+                Nacidos para criar, nacidos para liderar.<br />📍 Tostado, Santa
+                Fe, AR
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12 · Ley Primera: resultados -->
+    <section class="page dark grid-bg">
+      <div class="in">
+        <div class="pg-head">
+          <div class="l">
+            <p class="eyebrow muted">@leyprimerabonsmara · Resultados</p>
+            <h2 class="title">
+              Alcance y retención <span class="hl"
+                ><i></i>que se notan.<i></i></span
+              >
+            </h2>
+          </div>
+          <p class="muted" style="max-width:38ch">
+            Datos de Instagram Insights, con una cuenta de 335 seguidores.
+          </p>
+        </div>
+        <div class="cards">
+          <article class="ig-card">
+            <button class="media" type="button"
+              ><img
+                src="/img/lp_reel.jpg"
+                alt="Portada del reel: entrevista en formato podcast en la exposición"
+                loading="lazy"
+              /></button
+            >
+            <div class="stats">
+              <div class="top">
+                <span class="kind">Reel</span><h3>
+                  Entrevista en la exposición
+                </h3><span class="by">Collab con <b>rickymercau</b></span>
+              </div>
+              <div class="icons">
+                <div>
+                  <svg><use href="#ig-like"></use></svg><span>492</span>
+                </div>
+                <div>
+                  <svg><use href="#ig-comment"></use></svg><span>32</span>
+                </div>
+                <div>
+                  <svg><use href="#ig-repost"></use></svg><span>22</span>
+                </div>
+                <div>
+                  <svg><use href="#ig-share"></use></svg><span>117</span>
+                </div>
+                <div><svg><use href="#ig-save"></use></svg><span>55</span></div>
+              </div>
+              <div class="tiles">
+                <div class="tile">
+                  <small>Visualizaciones</small><b>21.491</b>
+                </div>
+                <div class="tile"><small>Espectadores</small><b>17.091</b></div>
+                <div class="tile">
+                  <small>Tiempo promedio de reproducción</small><b>45 s</b>
+                </div>
+                <div class="tile">
+                  <small>Nuevos seguidores</small><b>97</b>
+                </div>
+              </div>
+              <div class="wins">
+                <span class="win">51x alcance vs seguidores</span><span
+                  class="win v">4,2% interacción</span
+                >
+              </div>
+            </div>
+          </article>
+          <article class="ig-card">
+            <button class="media" type="button"
+              ><img
+                src="/img/lp_historia.jpg"
+                alt="Historia de cobertura del Congreso Bonsmara 2026, día uno"
+                loading="lazy"
+              /></button
+            >
+            <div class="stats">
+              <div class="top">
+                <span class="kind">Historias · 7</span><h3>
+                  Cobertura del Congreso Bonsmara 2026
+                </h3><span class="by"
+                  >Jesús María · 25 años de la raza en Argentina</span
+                >
+              </div>
+              <div>
+                <div
+                  class="bars"
+                  aria-label="Espectadores por historia: 78, 76, 73, 69, 65, 63, 59"
+                >
+                  <div><i style="height:100%"></i><span>78</span></div>
+                  <div><i style="height:97%"></i><span>76</span></div>
+                  <div><i style="height:94%"></i><span>73</span></div>
+                  <div><i style="height:88%"></i><span>69</span></div>
+                  <div><i style="height:83%"></i><span>65</span></div>
+                  <div><i style="height:81%"></i><span>63</span></div>
+                  <div><i style="height:76%"></i><span>59</span></div>
+                </div>
+                <div class="bars-cap">
+                  <span>Historia 1</span><span>Espectadores</span><span
+                    >Historia 7</span
+                  >
+                </div>
+              </div>
+              <div class="tiles">
+                <div class="tile">
+                  <small>Visualizaciones</small><b>6.948</b>
+                </div>
+                <div class="tile"><small>No seguidores</small><b>97,5%</b></div>
+              </div>
+              <div class="wins">
+                <span class="win">76% de retención en la secuencia</span>
+              </div>
+            </div>
+          </article>
+          <article class="ig-card stack wide">
+            <button class="media" type="button"
+              ><img
+                src="/img/lp_carrusel.jpg"
+                alt="Carrusel: foto grupal en Tradición Ganadera"
+                loading="lazy"
+              /></button
+            >
+            <div class="stats">
+              <div class="top">
+                <span class="kind">Carrusel</span><h3>
+                  Jornada en Tradición Ganadera
+                </h3><span class="by"
+                  >Collab con <b>asesoriaganadera.juangcazzullo</b> y 4 cuentas más</span
+                >
+              </div>
+              <div class="icons">
+                <div>
+                  <svg><use href="#ig-like"></use></svg><span>150</span>
+                </div>
+                <div>
+                  <svg><use href="#ig-comment"></use></svg><span>5</span>
+                </div>
+                <div>
+                  <svg><use href="#ig-repost"></use></svg><span>8</span>
+                </div>
+                <div><svg><use href="#ig-share"></use></svg><span>3</span></div>
+                <div><svg><use href="#ig-save"></use></svg><span>3</span></div>
+              </div>
+              <div class="tiles four">
+                <div class="tile">
+                  <small>Reproducciones</small><b>10.476</b>
+                </div>
+                <div class="tile"><small>Espectadores</small><b>3.421</b></div>
+                <div class="tile">
+                  <small>Visitas al perfil</small><b>41</b>
+                </div>
+                <div class="tile"><small>Seguidores</small><b>4</b></div>
+              </div>
+              <div class="wins">
+                <span class="win">10x alcance vs seguidores</span><span
+                  class="win v">4,9% interacción</span
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13 · Autoservicio Familiar: re-branding -->
+    <section class="page grid-bg af" id="autoservicio-familiar">
+      <div class="in">
+        <div class="pg-head">
+          <div class="l">
+            <span class="tag-head af-tag">Caso · Re-branding</span>
+            <span class="handle">@autoserviciofamiliar · Resultados</span>
+            <h2 class="title">
+              Un clásico del barrio, <span class="hl"
+                ><i></i>renovado.<i></i></span
+              >
+            </h2>
+          </div>
+        </div>
+        <div class="ba">
+          <div class="side">
+            <p>
+              Re-branding completo para un autoservicio con casi 30 años de
+              historia. Pasamos de un logo en blanco y negro a una identidad con
+              color, un sello que recupera el <b>“Desde 1996”</b> y un sistema visual
+              que funciona en redes, en pantallas y en el local.
+            </p>
+            <div class="swatches">
+              <div><span style="background:var(--af-rojo)"></span>#980000</div>
+              <div>
+                <span style="background:var(--af-petroleo)"></span>#0F4D5C
+              </div>
+              <div>
+                <span style="background:var(--af-amarillo)"></span>#FEAE0F
+              </div>
+              <div><span style="background:var(--af-gris)"></span>#D6D5D1</div>
+            </div>
+            <p class="montserrat"><b>Aa</b> Montserrat</p>
+          </div>
+          <div class="phones">
+            <div class="phone before">
+              <span class="phone-tag">Antes</span>
+              <button class="scr af-scr" type="button" data-zoom>
+                <img
+                  class="contain"
+                  src="/img/af_antes.jpg"
+                  alt="Logo anterior de Autoservicio Familiar en blanco y negro, en una placa de sorteo"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+            <div class="phone after">
+              <span class="phone-tag">Después</span>
+              <button class="scr af-scr" type="button" data-zoom>
+                <img
+                  src="/img/af_branding.jpg"
+                  alt="Manual de marca de Autoservicio Familiar: sello rojo con changuito, paleta cromática y tipografía Montserrat"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14 · Autoservicio Familiar: piezas -->
+    <section class="page af">
+      <div class="in">
+        <div class="pg-head">
+          <div class="l">
+            <span class="tag-head af-tag">Placas y cartelería</span>
+            <h2 class="title">
+              La marca, de la pantalla a la <span class="hl"
+                ><i></i>góndola.<i></i></span
+              >
+            </h2>
+          </div>
+          <p class="muted" style="max-width:36ch">
+            Un mismo sistema visual para todo lo que ve el cliente: en
+            Instagram, en las pantallas del local y frente a cada producto.
+          </p>
+        </div>
+        <div class="af-gallery">
+          <div class="af-row af-fan">
+            <button class="piece" type="button" style="--r: .5625"
+              ><img src="/img/af_placa.jpg" alt="Placa de Autoservicio Familiar: sábalo y boga, entero y despinado, fresco" loading="lazy" /></button
+            >
+            <button class="piece" type="button" style="--r: .5625"
+              ><img src="/img/af_fiambres.jpg" alt="Plantilla de oferta de fiambres con precio por gramos" loading="lazy" /></button
+            >
+            <button class="piece" type="button" style="--r: .545"
+              ><img src="/img/af_oferta_dia.jpg" alt="Plantilla Oferta del día para pantallas: mermelada Arcor" loading="lazy" /></button
+            >
+            <button class="piece" type="button" style="--r: .545"
+              ><img src="/img/af_oferta_semana.jpg" alt="Plantilla Oferta de la semana para pantallas: criollitas" loading="lazy" /></button
+            >
+            <button class="piece" type="button" style="--r: .729"
+              ><img src="/img/af_gondola.jpg" alt="Cartel de góndola Producto Tarjeta Familiar: rollo de cocina Sussex con precio con la tarjeta" loading="lazy" /></button
+            >
+            <button class="piece" type="button" style="--r: .8"
+              ><img src="/img/af_medios_pago.jpg" alt="Placa de medios de pago: 10% de reintegro todos los días pagando de contado" loading="lazy" /></button
+            >
+          </div>
+            <article class="ig-card profile-card">
+              <div class="avatar">
+                <img
+                  src="/img/af_avatar.jpg"
+                  alt="Logo de Autoservicio Familiar"
+                />
+              </div>
+              <div>
+                <div class="p-head">
+                  <a
+                    class="p-handle ig-link"
+                    href="https://www.instagram.com/autoserviciofamiliar/"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="autoserviciofamiliar en Instagram (se abre en una pestaña nueva)"
+                    ><svg class="ig-ico" viewBox="0 0 24 24" aria-hidden="true"
+                      ><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle
+                        cx="12"
+                        cy="12"
+                        r="4.2"></circle><circle class="dot" cx="17.3" cy="6.7" r="1.1"
+                      ></circle></svg
+                    >autoserviciofamiliar<svg
+                      class="arrow"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"><path d="M7 17 17 7M8.5 7H17v8.5"></path></svg
+                    ></a
+                  ><span
+                    class="kind kind-corner">Perfil renovado</span
+                  >
+                </div>
+                <p class="p-name">Autoservicio Familiar</p>
+                <div class="p-stats">
+                  <div><b>21</b><span>publicaciones</span></div>
+                  <div><b>987</b><span>seguidores</span></div>
+                  <div><b>933</b><span>seguidos</span></div>
+                </div>
+                <p class="p-bio">
+                  “La economía de tu hogar”<br />🚗 Envíos a domicilio sin
+                  cargo.<br />💳 Tarjetas de débito y crédito.
+                </p>
+              </div>
+            </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15 · Gracias -->
+    <section class="page degrade" id="contacto">
+      <div class="in thanks">
+        <img
+          class="iso"
+          src="/brand/iso-negro.svg"
+          alt="D + corazón, isotipo de DMAS"
+        />
+        <h2>Muchas <span class="hl v"><i></i>gracias<i></i></span></h2>
+        <p class="lead">¿Hablamos de tu marca?</p>
+        <p class="mail" id="mail">{email}</p>
+        <div class="links">
+          <button class="pill" type="button" id="copy">Copiar email</button>
+          <a
+            class="pill line"
+            href="https://www.instagram.com/hello.dmas/"
+            target="_blank"
+            rel="noopener">@hello.dmas</a
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div
+    class="viewer"
+    id="viewer"
+    hidden
+    role="dialog"
+    aria-modal="true"
+    aria-label="Pieza ampliada"
+  >
+    <button class="pill lima-p" type="button" id="close">Cerrar</button>
+    <img id="viewer-img" alt="" />
+  </div>
 </Layout>
+
+<script>
+  const viewer = document.getElementById("viewer") as HTMLDivElement;
+  const vImg = document.getElementById("viewer-img") as HTMLImageElement;
+  const closeBtn = document.getElementById("close") as HTMLButtonElement;
+  let last: HTMLElement | null = null;
+  document
+    .querySelectorAll<HTMLElement>(".piece, .media, [data-zoom], [data-src]")
+    .forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const img = btn.querySelector("img");
+        last = btn;
+        vImg.src = btn.dataset.src || img?.src || "";
+        vImg.alt = btn.dataset.src
+          ? "Estadísticas del reel en Instagram"
+          : img?.alt || "";
+        viewer.hidden = false;
+        document.documentElement.style.overflow = "hidden";
+        closeBtn.focus();
+      });
+    });
+  function closeViewer() {
+    viewer.hidden = true;
+    document.documentElement.style.overflow = "";
+    if (last) last.focus();
+  }
+  closeBtn.addEventListener("click", closeViewer);
+  viewer.addEventListener("click", (e) => {
+    if (e.target === viewer) closeViewer();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !viewer.hidden) closeViewer();
+  });
+
+  const copyBtn = document.getElementById("copy") as HTMLButtonElement;
+  copyBtn.addEventListener("click", () => {
+    const mail = document.getElementById("mail") as HTMLElement;
+    const done = () => {
+      copyBtn.textContent = "Email copiado";
+      copyBtn.classList.add("ok");
+      setTimeout(() => {
+        copyBtn.textContent = "Copiar email";
+        copyBtn.classList.remove("ok");
+      }, 2000);
+    };
+    const fallback = () => {
+      const r = document.createRange();
+      r.selectNodeContents(mail);
+      const s = getSelection();
+      s?.removeAllRanges();
+      s?.addRange(r);
+      copyBtn.textContent = "Copialo con Ctrl+C";
+    };
+    try {
+      navigator.clipboard
+        .writeText(mail.textContent?.trim() || "")
+        .then(done, fallback);
+    } catch {
+      fallback();
+    }
+  });
+
+  // Entrada al scrollear: cada bloque sube y aparece una sola vez, escalonado entre hermanos.
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const revealSelector = [
+    ".cover-grid > *",
+    ".about > *",
+    ".center-head",
+    ".services > *",
+    ".two > *",
+    ".pg-head",
+    ".brand-grid > *",
+    ".posts > *",
+    ".pg-content .profile-card",
+    ".kpis > *",
+    ".cards > *",
+    ".lp-intro",
+    ".ba > *",
+    ".af-row > *",
+    ".af-gallery > .profile-card",
+    ".thanks > *",
+  ].join(", ");
+  const revealEls = document.querySelectorAll<HTMLElement>(revealSelector);
+  revealEls.forEach((el) => {
+    const siblings = [...(el.parentElement?.children ?? [])].filter((s) =>
+      s.matches(revealSelector),
+    );
+    el.dataset.reveal = "";
+    el.style.setProperty("--d", `${Math.min(siblings.indexOf(el), 5) * 80}ms`);
+  });
+
+  // Los KPIs cuentan hasta su valor final (respeta el formato es-AR: 25.389, 5,3%).
+  function countUp(el: HTMLElement) {
+    const final = el.textContent ?? "";
+    const m = final.match(/^([^\d]*)([\d.,]+)(.*)$/);
+    if (!m || reduced) return;
+    const [, pre, num, post] = m;
+    const decimals = num.includes(",") ? num.split(",")[1].length : 0;
+    const target = parseFloat(num.replace(/\./g, "").replace(",", "."));
+    const fmt = new Intl.NumberFormat("es-AR", {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals,
+    });
+    const start = performance.now();
+    const dur = 1100;
+    const tick = (now: number) => {
+      const t = Math.min((now - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = t < 1 ? pre + fmt.format(target * eased) + post : final;
+      if (t < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target as HTMLElement;
+        el.classList.add("is-in");
+        if (el.matches(".kpi")) countUp(el.querySelector("b") as HTMLElement);
+        revealObserver.unobserve(el);
+      });
+    },
+    { rootMargin: "0px 0px -8% 0px", threshold: 0.15 },
+  );
+  revealEls.forEach((el) => revealObserver.observe(el));
+
+  // Nav: marca la sección visible. Las páginas sin enlace propio heredan la anterior.
+  const navLinks = document.querySelectorAll<HTMLAnchorElement>(".bar nav a");
+  const navFor: Record<string, string> = {
+    "sobre-mi": "#sobre-mi",
+    servicios: "#servicios",
+    pergoagro: "#pergoagro",
+    "ley-primera": "#pergoagro",
+    "autoservicio-familiar": "#pergoagro",
+    contacto: "#contacto",
+  };
+  const pages = [...document.querySelectorAll<HTMLElement>("main > .page")];
+  function updateNav() {
+    const line = innerHeight * 0.4;
+    let current = "";
+    for (const page of pages) {
+      if (page.getBoundingClientRect().top > line) break;
+      if (page.id) current = navFor[page.id] ?? "";
+    }
+    navLinks.forEach((a) => {
+      if (a.getAttribute("href") === current) a.setAttribute("aria-current", "location");
+      else a.removeAttribute("aria-current");
+    });
+  }
+  let navQueued = false;
+  addEventListener(
+    "scroll",
+    () => {
+      if (navQueued) return;
+      navQueued = true;
+      requestAnimationFrame(() => {
+        navQueued = false;
+        updateNav();
+      });
+    },
+    { passive: true },
+  );
+  updateNav();
+
+  // Parallax de stickers: cada uno se mueve según data-parallax (más alto = más rápido),
+  // relativo al centro de su página. Solo se calculan las páginas visibles.
+  const stickers = [...document.querySelectorAll<HTMLElement>("[data-parallax]")];
+  if (!reduced && stickers.length) {
+    const visible = new Set<HTMLElement>();
+    const items = stickers.map((el) => ({
+      el,
+      depth: parseFloat(el.dataset.parallax ?? "0"),
+      page: el.closest<HTMLElement>(".page") as HTMLElement,
+    }));
+    const pageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) visible.add(e.target as HTMLElement);
+        else visible.delete(e.target as HTMLElement);
+      });
+      updateParallax();
+    });
+    new Set(items.map((i) => i.page)).forEach((p) => pageObserver.observe(p));
+
+    function updateParallax() {
+      const mid = innerHeight / 2;
+      // En pantallas chicas las páginas son altas: menos recorrido para no tapar el texto.
+      const narrow = innerWidth < 760;
+      for (const { el, depth, page } of items) {
+        if (!visible.has(page)) continue;
+        const max = !narrow ? 90 : el.matches(".sticker") ? 10 : 40;
+        const r = page.getBoundingClientRect();
+        const offset = (r.top + r.height / 2 - mid) * depth * (narrow ? 0.5 : 1);
+        el.style.translate = `0 ${Math.max(-max, Math.min(max, offset)).toFixed(1)}px`;
+      }
+    }
+    let parallaxQueued = false;
+    addEventListener(
+      "scroll",
+      () => {
+        if (parallaxQueued) return;
+        parallaxQueued = true;
+        requestAnimationFrame(() => {
+          parallaxQueued = false;
+          updateParallax();
+        });
+      },
+      { passive: true },
+    );
+    addEventListener("resize", updateParallax, { passive: true });
+  }
+</script>
