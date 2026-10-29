@@ -110,7 +110,7 @@ html { scrollbar-width: thin; scrollbar-color: rgba(242, 239, 235, .3) var(--neg
 
 /* 3 · Servicios */
 .center-head { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 44px; }
-.services { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+.services { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
 .svc { background: #FFFFFF; border: 1.5px solid var(--negro); border-radius: 22px; padding: 22px 20px 24px; display: flex; flex-direction: column; gap: 12px; min-width: 0; transition: transform .2s ease, background .2s ease; }
 .svc:hover { transform: translateY(-4px); background: var(--lima); }
 .svc img { width: 44px; height: 44px; }
@@ -417,3 +417,18 @@ html { scrollbar-width: thin; scrollbar-color: rgba(242, 239, 235, .3) var(--neg
 /* Etiqueta en la esquina superior derecha de la tarjeta de perfil */
 .profile-card:has(.kind-corner) { position: relative; }
 .ig-card .kind.kind-corner { position: absolute; top: clamp(14px, 2vw, 22px); right: clamp(14px, 2vw, 22px); }
+
+/* Proyectos y clientes: continuidad de la identidad DMAS. */
+.projects-divider > .in { min-height: 0; padding-block: clamp(48px, 8vw, 110px); }
+.projects-divider h2 { font-size: clamp(2rem, 6vw, 5rem); line-height: 1.05; overflow-wrap: anywhere; }
+.client-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.client-card { min-width: 0; background: white; padding: 22px; border-radius: 16px; display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+.client-card h3 { font-size: 1.3rem; }
+.client-card > img { display: block; width: 100%; height: auto; }
+.client-card .pill { margin-top: auto; }
+.podcast-work { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .7fr); gap: clamp(24px, 6vw, 80px); align-items: center; margin-top: 64px; }
+.podcast-work .title { margin-block: 24px; }
+.podcast-caption { display: block; width: min(100%, 460px); height: auto; margin-bottom: 24px; border-radius: 8px; }
+.podcast-cover { max-width: 320px; justify-self: center; }
+.podcast-cover img { display: block; width: 100%; height: auto; }
+@media (max-width: 760px) { .client-grid, .podcast-work { grid-template-columns: 1fr; } .client-card { padding: 20px; } }
