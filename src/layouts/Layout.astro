@@ -4,12 +4,19 @@ import '../styles/global.css';
 interface Props {
 	title?: string;
 	description?: string;
+	image?: string;
 }
 
 const {
-	title = 'Delfina Socias',
-	description = 'Portfolio de Delfina Socias, Social Media Manager y Community Manager. DMAS.',
+	title = 'Delfina Socias · Social Media & Community Manager',
+	description = 'Portfolio de Delfina Socias (DMAS): estrategia de contenido, branding y gestión de redes para marcas que quieren crecer en Instagram y TikTok.',
+	image = '/og.png',
 } = Astro.props;
+
+// Las redes necesitan URLs absolutas: se arman con `site` de astro.config.mjs.
+const base = Astro.site ?? Astro.url;
+const canonical = new URL(Astro.url.pathname, base);
+const imageUrl = new URL(image, base);
 ---
 
 <!doctype html>
@@ -20,8 +27,31 @@ const {
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content={description} />
 		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="author" content="Delfina Socias" />
+		<meta name="theme-color" content="#0B0B0C" />
+		<link rel="canonical" href={canonical} />
+
+		<!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="es_AR" />
+		<meta property="og:site_name" content="DMAS · Delfina Socias" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:image" content={imageUrl} />
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content="Hola, soy Delfina. Social Media Manager y Community Manager. DMAS, @hello.dmas" />
+
+		<!-- X / Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={imageUrl} />
+
 		<script is:inline>document.documentElement.classList.add('js');</script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
