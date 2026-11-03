@@ -22,14 +22,15 @@ jobs:
       - name: 📦 Instalar dependencias
         run: npm ci
 
-      - name: 🏗️ Compilar sitio Astro (npm run build)
+      - name: 🏗️ Compilar sitio Astro
         run: npm run build
 
-      - name: 🚀 Subir carpeta dist por FTP a DonWeb
+      - name: 🚀 Subir por FTP a DonWeb
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: /public_html/
+          server-dir: public_html/
+          dangerous-clean-slate: false
